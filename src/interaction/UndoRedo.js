@@ -244,7 +244,7 @@ var ol_interaction_UndoRedo = class olinteractionUndoRedo extends ol_interaction
 
     if (map) {
       // Watch the vector sources in the map 
-      var vectors = getVectorLayers(map.getLayers())
+      var vectors = getVectorLayers(map.getAllLayers())
       vectors.forEach((function (l) {
         var s = l.getSource()
         this._sourceListener.push(s.on(['addfeature', 'removefeature'], this._onAddRemove.bind(this)))
